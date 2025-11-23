@@ -1,0 +1,27 @@
+1. This is a review of the manuscript "Newton's theory of gravity versus water bottles" by Badmin, Dolgin, Khabinskiy, Koping, and Pechersky. The title and main premise of "Newton's theory of gravity" are flawed and need to be completely revised or the paper should be rejected. It's unclear how a theory can be pitted against water bottles. 
+
+2. Abstract: "to test this hypothesis (objects accelerate uniformly with the same acceleration as they fall) we created two identical objects..." is a long way to say you testing two objects of the same shape but different mass? Or do they have the same mass too but different densities. Given that they set to test this they do not identify what a control would be.
+
+3. Introduction: No sources are given. No actual direct measurements of force are made so it is unclear why the authors mention Newton's second law. It's not clear why Newton's second law would cause one to reject that mean speeds are different or not (and the use of \mu here is completely confusing as they mean $|v|$???).
+
+4. Methods - The type of water bottle is not specified. The source of rocks is not given. "Fileld to same level" not explained what level. This is not replicable and should be grounds for rejection.
+
+Setup for the lab is repeated at top of page 2 - why?
+
+Method of recording data - has lot of extraneous an irrelevant information about countdowns but is lacking with necessary information on: what was used to time, how the timers were instructed, hoe many tehre were, what the phone was and what resolution. How it was placed. What the field was view was. How the scene was calibrated. Etc etc etc. NOT REPLICABLE.
+
+5. Results: Average time is given, which presumably they mean arithmetic mean, and no s.d. and no n is given! Average speed is highly unlikely to be known to 3 or 4 significant figures! Two different tables are given for water versus rocks when one table with both would suffice. The tables are not referred to in the text. A bar graph is mentioned but no bar graph eppears.
+
+Results from "digitizing the experimetn" are mentioned but never given! REJECT.
+
+The two sample t-test information is given but they do not give the d.f., if it was paired (how? should be unpaired), etc. They claim the difference between 0.902 and 0.963 is significant ("rocks" versus"bottle"? first paragraph of discussion).
+
+6. Discussion: Digitizing in FizziQ is never explained at all in methods or results so what is going on in discussion???
+
+No alternative explanations are entertained for why the rocks fell faster than the water. The difference is most certainly felt by the human dropper and the timers also knew because the type of drop was announced to all. Randomizing these and hiding them from the people doing the timing might have been a wise thing to do here.
+
+7. The authors have a separate conclusion but this should be part of the discussion. Newton's 2nd law is mentioned but it is not clear why as this was not tests.
+
+The references metnion Newton's Theory of UNiversal Gravitation but the authors seem not to have read it - it is not at all what was tested here.
+
+

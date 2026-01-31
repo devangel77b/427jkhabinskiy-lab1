@@ -1,0 +1,131 @@
+\documentclass[reprint,amsmath,amssymb,aps,twoside]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{siunitx}
+%\usepackage{tikz,pgfplots}
+\sisetup{separate-uncertainty=true}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{cleveref}
+\crefname{equation}{}{}
+\crefname{figure}{Fig.}{Figs.}
+\crefname{table}{Table}{Tables}
+\usepackage{svg}
+
+% set PDF metadata
+\hypersetup{%
+pdftitle={Investigation of free fall using bottles of water and rocks},
+pdfauthor={Nimya Badmin, Andrew Dolgin, Julia Khabinskiy, Kyle Koping, and Ella Pechersky},
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{J S\&E \textbf{2}, 30--35 (2026)}
+\fancyhead[LO]{Khabinskiy \emph{et al}}
+\fancyhead[LE]{Investigation of freefall}
+\fancyfoot[C]{\thepage}
+\fancypagestyle{mytitlepage}{
+\fancyhf{}
+\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, 30--35 (2026)}
+\fancyfoot[C]{\thepage}
+}
+
+
+\begin{document}
+\setcounter{page}{30}
+
+\title{Investigation of free fall using bottles of water and rocks}
+\author{Nimya Badmin}
+\author{Andrew Dolgin}
+\author{Julia Khabinskiy}
+\email{Contact author: 427jkhabinskiy@frhsd.com}
+\author{Kyle Koping}
+\author{Ella Pechersky}
+\affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
+\date{\today}
+
+\begin{abstract}
+Galileo Galilei proposed that, in the absence of resistance from the surrounding environment, all objects fall with the same constant acceleration regardless of mass. This indicates that constant acceleration occurs across any time interval for one object, and that the overall acceleration of one object compared to another is the same, regardless of mass. In this experiment, we tested Galileo's prediction by comparing the fall times of two identical plastic water bottles filled three-quarters of the way to the top, one with water and the other with rocks. Motion of the bottles was recorded, digitized, and analyzed. Velocity/time graphs were generated for five trials of each bottle, and acceleration was determined from the slope of the linear regression line for each trial. A two-sample unpaired $t$-test was used to compare the mean accelerations. The statistical analysis showed no significant difference between the accelerations of the two bottles, supporting Galileo's theory of free fall. Any observed variation is attributed to experimental uncertainty and timing error rather than a difference in acceleration due to mass.
+\end{abstract}
+
+\keywords{keywords here}
+
+\maketitle\thispagestyle{mytitlepage}
+
+
+
+\section{Introduction}
+Galileo's claim of objects falling with the same constant acceleration independent of their mass is presented in \citet{galilei:1638:discourses}. This directly contradicted the Aristotelian view that a heavy body falls faster than a lighter one \cite{aristotle}. In Galilean free fall, acceleration is constant and uniform, and the time required for an object to fall from rest depends only on the height and gravitational acceleration, not on the object's mass. 
+
+The purpose of this experiment was to test Galileo's prediction by dropping two objects of identical shape and volume but different mass from the same height and comparing their fall times. Under Galilean assumptions, the two objects should reach the ground at the same time when dropped from the same height, demonstrating the same acceleration for objects of different masses but the same shape. The null hypothesis ($H_0$) states that the accelerations are equal, consistent with Galileo's theory that all objects fall with the same acceleration when resistance is neglected. Alternatively, the acclerations could differ, indicating a deviation from Galilean free fall. 
+\begin{align}
+H_0: a_{rocks} &= a_{water} \\
+H_1: a_{rocks} &\neq a_{water}
+\end{align}
+
+\section{Methods and materials}
+\subsection{Setup}
+This experiment consisted of dropping 2 disposable 8-inch by 2.5-inch plastic water bottles out of a window 5 meters from the ground. One water bottle was filled with water. The other water bottle was filled with small rocks (about ½ inch in diameter) from a suburban home garden in Manalapan, New Jersey (40.30194453727682, -74.37294897560335). The rocks were Vigoro 0.5 cu. ft. Bagged Marble Chip Landscape Rock bought from Home Depot. We tried to fill each bottle up with its corresponding contents to the same level (right above the label). The mass of the water bottle filled with water was 0.402 kg. The mass of the water bottle filled with rocks was 0.605 kg.
+
+\subsection{Drop tests}
+For the real-time dropping, a team of 2 people was stationed on the second floor of Manalapan High School (40.289602139811805, -74.33459251471615) to drop the bottles. The rest of the group went to ground level to record the times it took for each bottle to fall. A walkie-talkie was used to communicate with each other. We had 2 digital stopwatches to time the fall, as well as a phone to back up the stopwatches. The timers were set off when a countdown was announced from the drop team and were stopped when the ground team saw the bottles landing. These values were then recorded. We used a Samsung A21 recording in HD at 60fps at 1.0x zoom, placed where the ground team was standing. The video ended up being too large to upload, so we used a classmate’s recording from an iPhone 11 at 60fps and HD. This process was repeated five times for each bottle to account for the confounding variables of the experiment, such as wind, delay from the walkie-talkies, and human error regarding starting and stopping the stopwatches. Damage to the water bottles over repeated drops was fixed by pressing the shape back into its original form. We averaged the result values from the 5 drops for each bottle. A two-sample $t$-test was used to compare the mean fall times.
+
+
+
+
+
+\section{Results}
+Fill in later
+
+
+
+
+
+
+
+\section{Discussion}
+
+\subsection{Differing masses display similar accelerations}
+Our conclusion favored Galileo’s principles, as our bottles with differing masses displayed very similar accelerations: 10.26 m/s for water trials 1 and 2, and 10.53 m/s for rock trials 2 and 3 (picked random trials, but all acceleration values for water and rocks were similar to those listed), over the course of the trial. This acceleration value was found using the LSRL (Least Squares Regression Line), which provides the best fit linear relationship between velocity and time. Each trial, therefore, produced a single acceleration value from the slope of its LSRL, and the individual time points were not treated as independent measurements, avoiding pseudoreplication. The difference between the level of acceleration for the bottle with water and the bottle with rocks can be accounted for by a timing error in a rock trial. The timing error is evident because rock trial 3 took 0.2 seconds longer than any other rock trial or water trial, although it has more mass than a bottle of water. However, most of the timing was relatively consistent since the bottle of water, on average, took longer to fall than the bottle of rocks. The mean time across 5 trials of water was 0.9272 seconds, and the average time across 5 trials of rocks was 0.9324 seconds. To add, as shown by the 10 graphs for figures 3.2 and 3.4, the acceleration of both the water and the rocks differed significantly from 9.8, likely indicating human error, and not implying a violation of Galileo’s principle of acceleration.
+
+%4.2 Restating The Experiment
+%Our experiment aimed to determine whether the water bottle filled with rocks (heavier/higher density) would fall faster than the water bottle filled with water (lighter/lower density) through a series of tests. Our 2 water bottles were 2 identical plastic water bottles that were emptied and stuffed to the limit (3/4th of the capacity) with the contents. These tests involved dropping the two water bottles that differed in density from a height of 5 meters. While there is a significant mass difference between the two bottles, which could be perceived as a limitation, Galileo's Theory applies regardless of mass magnitude
+
+\subsection{Sources of experimental error}
+Although the statistical test suggests the difference in mean fall times, this result does not contradict Galilei's theory of free fall. Under Galilean assumptions, any deviation from equal fall times must be attributed to imperfections in the experiments, such as human error, rather than the physical law itself. An example of this human bias is the reaction time regarding timing the falls. This is why we decided to perform a video motion analysis of the experiment and get the exact time each bottle took to fall from that height. The stopwatch data was only used to double-check that the times given by our motion analysis were reasonable. Also, the imperfect angle at which the bottle had fallen due to bottle tumbling, wind, and drag could cause imperfection. This could cause the times to be inaccurate, and in turn, the velocity to be inaccurate. Also, the drop height was estimated rather than precisely measured. Lastly, we did have coarse time intervals. This was because data points were limited by frame rate when digitizing the motion. This is a limitation of the video analysis method used, but this method was still great as it worked well in finding the velocity at certain times.
+
+%4.4 Statistical Analysis
+%Overall, the $t$-test reinforces the idea that the bottle will have the same acceleration despite having differing masses. The test statistic obtained provides us with a value that is greater than the tested significance value. This test showed no significant difference between the accelerations of the two bottles (rocks and water), which reinforces the idea of Galilean free fall, an integral part of physics. Also, Video analysis that was performed using the FizziQ app confirmed that both models underwent a constant acceleration in every trial. FizziQ confirmed this by demonstrating a linear relationship between the velocities of each bottle falling between certain points.
+
+%4.5 Testing Hypotheses using Data and Comparison to Galilean Theory of Free Fall
+%The idea of Galilean free fall describes that every object will experience the same acceleration due to gravity when dropped from the same place. Regarding this hypothesis, a heavier object should experience the same downward gravitational acceleration as a lighter object. Additionally, since the two bottles are of the same shape and size, the drag force is nearly the same and will not affect the acceleration. Our findings support the null hypothesis and reject the alternative hypothesis, since the mean acceleration of the average of all trials of water (about -10-> Mean acceleration of all trials of water=-10.224 ± 0.172m/s2) was equal to that of the trials of the bottle of rocks (about -10-> Mean acceleration of all trials of rocks=-10.126 ± 0.562m/s2). So, Ho: arocks=awater is supported, and the alternative hypothesis (Ha: arocks≠awater) is not supported.
+
+%4.6 LSRL Analysis for Constant Acceleration and Value of g
+%In addition, the part of Galilean free fall describing constant acceleration across equal time intervals is supported, since the LSRL of the time vs V graph passes through every point, and if choosing random intervals to find the constant of acceleration, it is evident that it is nearly the same for any time interval of any trial of rocks or water. Also, the slope of the Velocity vs Time graph is consistently between 10 and 10.5 for both the bottle and water drops, showing that the acceleration is much greater than 9.8 (g). This is likely due to human error, including not obtaining the exact times and position, as well as dropping the bottle at a slight angle. This error, in regard to frame rate limitations and release angle, is why a one-sample $t$-test was not conducted. After all, making a statistical comparison to an idealized theoretical constant would not be appropriate.
+
+
+
+
+
+
+\section{Acknowledgments}
+We thank our classmates who assisted with data collection and several anonymous reviewers who helped with revisions. NB recorded the drop and completed many of the initial revisions. EP helped with timing and worked on Methods. KK helped with performing the drop, wrote part of Introduction, and did analysis. AD worked on Abstract and collected data. JK helped with timing, did the video motion analysis, Results, Discussion, and handled initial and final revisions.
+
+
+
+
+
+\bibliography{lab.bib}
+%References
+%[1] P.A. Tipler and G. Mosca. Physics for Scientists and Engineers, 5th ed. (W H Freeman and Company, New York, 2004).
+%
+%“De Caelo : Aristotle : Free Download, Borrow, and Streaming : Internet Archive.” Internet Archive, 2026, archive.org/details/decaelo00aris. Accessed 12 Jan. 2026.
+%
+%Galilei, G. Dialogues Concerning Two New Sciences (1638).
+%
+%Chazot, Christophe. FizziQ. 5.0.4, Trapèze. Digital, 2025, Apple App Store.
+
+
+\end{document}

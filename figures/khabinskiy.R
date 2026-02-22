@@ -6,7 +6,7 @@ grouped <- dplyr::group_by(raw,type)
 
 # make plot
 fig <- ggplot(raw, aes(t, v_ms, colour=type)) +
-    geom_hline(yintercept=0,colour="gray50") +
+    geom_hline(yintercept=0,colour="gray70") +
     geom_point() +
     geom_smooth(method="lm",se=FALSE) +
     theme_bw(base_size=8) + 
@@ -16,6 +16,7 @@ fig <- ggplot(raw, aes(t, v_ms, colour=type)) +
 	legend.position.inside=c(0.95,0.95),
 	legend.justification.inside=c("right","top"),
 	legend.title=element_blank(),
+	legend.key.size=unit(4,"pt"),
 	axis.title.y=element_text(margin=margin(t=0,r=5,b=0,l=0,unit="pt")))
 
 # save the figure

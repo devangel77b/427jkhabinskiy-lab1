@@ -9,7 +9,7 @@ fig <- ggplot(raw, aes(t, v_ms, colour=type)) +
     geom_hline(yintercept=0,colour="gray50") +
     geom_point() +
     geom_smooth(method="lm",se=FALSE) +
-    theme_classic(base_size=8) + 
+    theme_bw(base_size=8) + 
     xlab('$t$, \\unit{\\second}')+
     ylab('$v$, \\unit{\\meter\\per\\second}')+
     theme(legend.position="inside",

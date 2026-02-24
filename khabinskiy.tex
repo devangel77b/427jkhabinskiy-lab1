@@ -23,13 +23,13 @@ pdfauthor={Nimya Badmin, Andrew Dolgin, Julia Khabinskiy, Kyle Koping, and Ella 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RE,RO]{J S\&E \textbf{2}, 32--33 (2026)}
+\fancyhead[RE,RO]{J S\&E \textbf{2}, 32--34 (2026)}
 \fancyhead[LO]{Khabinskiy \emph{et al}}
 \fancyhead[LE]{Investigation of freefall}
 \fancyfoot[C]{\thepage}
 \fancypagestyle{mytitlepage}{
 \fancyhf{}
-\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, 32--33 (2026)}
+\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, 32--34 (2026)}
 \fancyfoot[C]{\thepage}
 }
 
@@ -68,8 +68,7 @@ H_1: a_{rocks} &\neq a_{water}
 
 \section{Methods and materials}
 \subsection{Setup}
-This experiment consisted of dropping 2 disposable 8-inch by 2.5-inch plastic water bottles out of a window 5 meters from the ground. One water bottle was filled with water. The other water bottle was filled with small rocks (about ½ inch in diameter) from a suburban home garden in Manalapan, New Jersey (40.30194453727682, -74.37294897560335). The rocks were Vigoro 0.5 cu. ft. Bagged Marble Chip Landscape Rock bought from Home Depot. We tried to fill each bottle up with its corresponding contents to the same level (right above the label). The mass of the water bottle filled with water was 0.402 kg. The mass of the water bottle filled with rocks was 0.605 kg.
-
+This experiment consisted of dropping two disposable 8-inch by 2.5-inch plastic water bottles (Natural Spring Water; Trader Joe's; Freehold, NJ) out of a window \qty{5}{\meter} from the ground. One water bottle was filled with fresh tap water. The other water bottle was filled with small rocks (about \qty{0.5}{in} diameter) from a suburban home garden in Manalapan, NJ. The rocks were Vigoro Bagged Marble Chip Landscape Rock (Home Depot; Marlboro, NJ). Bottles were filled with their corresponding contents to the same level (right above the label). The mass of the water bottle filled with water was \qty{0.402}{\kilo\gram}. The mass of the water bottle filled with rocks was \qty{0.605}{\kilo\gram}.
 \begin{figure}
 \begin{center}
 \includegraphics{figures/newfig1.pdf}
@@ -79,27 +78,38 @@ This experiment consisted of dropping 2 disposable 8-inch by 2.5-inch plastic wa
 \end{figure}
 
 \subsection{Drop tests}
-For the real-time dropping, a team of 2 people was stationed on the second floor of Manalapan High School (40.289602139811805, -74.33459251471615) to drop the bottles. The rest of the group went to ground level to record the times it took for each bottle to fall. A walkie-talkie was used to communicate with each other. We had 2 digital stopwatches to time the fall, as well as a phone to back up the stopwatches. The timers were set off when a countdown was announced from the drop team and were stopped when the ground team saw the bottles landing. These values were then recorded. We used a Samsung A21 recording in HD at 60fps at 1.0x zoom, placed where the ground team was standing. The video ended up being too large to upload, so we used a classmate’s recording from an iPhone 11 at 60fps and HD. This process was repeated five times for each bottle to account for the confounding variables of the experiment, such as wind, delay from the walkie-talkies, and human error regarding starting and stopping the stopwatches. Damage to the water bottles over repeated drops was fixed by pressing the shape back into its original form. We averaged the result values from the 5 drops for each bottle. A two-sample $t$-test was used to compare the mean fall times \cite{starnes:2015:practice}.
+For the real-time dropping, two people were stationed on the second floor of Manalapan High School (\ang{40.2896}N, \ang{74.3363}W) to drop the bottles. The rest of the team went to ground level to record the times it took for each bottle to fall. Walkie-talkies (UV-5R; Baofeng; Quanzhou City, China) were used to communicate. We had two digital stopwatches (Pulivia YS-802; Shenzhen, China) to time the fall, as well as a phone to back up the stopwatches. The timers were started when a countdown was announced from the drop team and were stopped when the ground observed the bottles landing. These values were then recorded. We used a smartphone (Samsung A21; Suwon-Si, South Korea) recording in HD at \qty{60}{fps} at 1.0x zoom, placed where the ground team was standing. The video ended up being too large to upload, so we used a classmate’s recording from an iPhone 11 (Apple, Inc; Cupertino, CA) at 60fps and HD. This process was repeated five times for each bottle to account for the confounding variables of the experiment, such as wind, delay from the walkie-talkies, and human error regarding starting and stopping the stopwatches. Damage to the water bottles over repeated drops was fixed by pressing the shape back into its original form. 
 
-Videos were analyzed in the app FizziQ (\url{https://www.fizziq.org/en/fizziqclassique}) to obtain video kinematics and measure drop times \cite{chazot:2025:using}. Subsequent statistical analysis was performed in R \cite{R} using the \texttt{ggplot2} and \texttt{dplyr} packages \cite{ggplot2,dplyr}. All data and analysis code are available at \url{https://github.com/devangel77b/427khabinskiy-lab1}. 
+The acceleration for each drop was calculated assuming constant, uniform acceleration:
+\begin{equation}
+a = \frac{2 h}{t^2}
+\end{equation}
+where $h=\qty{5.0}{\meter}$ is the drop height and $t$ is the measured drop time. The assumption of uniform constant acceleration was later confirmed by digitizing video, as discussed below (please see \cref{fig:2}). Statistical analyses of the drop times and their corresponding acceleration was performed in R \cite{starnes:2015:practice, R}.
+
+
+
+\subsection{Analysis}
+Videos were analyzed in the app FizziQ (\url{https://www.fizziq.org/en/fizziqclassique}) to obtain video kinematics \cite{chazot:2025:using}. As a second check of our acceleration estimates, acceleration was a;sp found from the velocity data obtained from FizziQ, which was subject to linear regression to determine the slope. Subsequent statistical analysis was performed in R \cite{R} using the \texttt{ggplot2} and \texttt{dplyr} packages \cite{ggplot2,dplyr}. All data and analysis code are available at \url{https://github.com/devangel77b/427khabinskiy-lab1}. 
+
 
 
 
 \section{Results}
-Drop times and accelerations are summarized in \cref{tab:1}. Velocity estimates from digitized data are shown in \cref{fig:2}. Differences between rocks and water are not significant for times (ANOVA, $p=0.893$) nor for acceleration (nested ANOVA, $p=0.119$).
-\begin{table}
-\caption{Drop times and accelerations (mean $\pm$ 1 s.d.) for $n=5$ drops. Differences between rocks and water are not significant for times (ANOVA, $p=0.893$) nor for acceleration (nested ANOVA, $p=0.119$).}
+Drop times and accelerations are summarized in \cref{tab:1}. Differences between rocks and water are not significant for times (ANOVA, $p=0.893$) nor for acceleration (ANOVA, $p=0.963$).
+\begin{table}[b]
+\caption{Drop times and accelerations (mean $\pm$ 1 s.d.) for $n=5$ drops. Differences between rocks and water are not significant for times (ANOVA, $p=0.893$) nor for acceleration (ANOVA, $p=0.963$).}
 \label{tab:1}
 \begin{ruledtabular}
 \begin{tabular}{lcc}
 & $t$, \unit{\second} & $a$, \unit{\meter\per\second\squared} \\
 \colrule
-rocks & \num{0.93\pm0.7} & \num{-9.6\pm0.5} \\
-water & \num{0.93\pm0.4} & \num{-10.2\pm0.2} 
+rocks & \num{0.93\pm0.07} & \num{-12\pm2} \\
+water & \num{0.93\pm0.04} & \num{-12\pm1} 
 \end{tabular}
 \end{ruledtabular}
 \end{table}
 
+Velocity estimates from digitized data are shown in \cref{fig:2}. Differences between rocks and water are not significant for times (ANOVA, $p=0.893$) nor for acceleration (nested ANOVA, $p=0.119$).
 \begin{figure}
 \begin{center}
 \includesvg{fig2.svg}
@@ -116,14 +126,18 @@ water & \num{0.93\pm0.4} & \num{-10.2\pm0.2}
 
 \section{Discussion}
 
-\subsection{Differing masses display similar accelerations}
-Our conclusion favored Galileo’s principles \cite{galilei:1638:discorsi, machamer:2021:galileo}, as our bottles with differing masses displayed very similar accelerations: 10.26 m/s for water trials 1 and 2, and 10.53 m/s for rock trials 2 and 3 (picked random trials, but all acceleration values for water and rocks were similar to those listed), over the course of the trial. This acceleration value was found using the LSRL (Least Squares Regression Line), which provides the best fit linear relationship between velocity and time. Each trial, therefore, produced a single acceleration value from the slope of its LSRL, and the individual time points were not treated as independent measurements, avoiding pseudoreplication. The difference between the level of acceleration for the bottle with water and the bottle with rocks can be accounted for by a timing error in a rock trial. The timing error is evident because rock trial 3 took 0.2 seconds longer than any other rock trial or water trial, although it has more mass than a bottle of water. However, most of the timing was relatively consistent since the bottle of water, on average, took longer to fall than the bottle of rocks. The mean time across 5 trials of water was 0.9272 seconds, and the average time across 5 trials of rocks was 0.9324 seconds. To add, as shown by the 10 graphs for figures 3.2 and 3.4, the acceleration of both the water and the rocks differed significantly from 9.8 \cite{tipler, openstax, barrons}, likely indicating human error, and not implying a violation of Galileo’s principle of acceleration.
+\subsection{Differing masses display similar accelerations, supporting Galileo}
+Despite a 50\% greater mass for rocks versus water, both bottles fell in the same amount of time and with the same acceleration. As shown in \cref{tab:1} and \cref{fig:2}, our data support Galileo’s hypothesis \cite{galilei:1638:discorsi, machamer:2021:galileo} and refute Aristotle's \cite{aristotle:physics}. Despite differing masses, the bottles displayed very similar accelerations (\cref{tab:1}). The same was seen in accelerations obtained from digitized kinematics (\cref{fig:2}): \qty{10.2\pm0.2}{\meter\per\second\squared} for water, and \qty{9.6}{\meter\per\second\squared} for rock. Differences between rocks and water were not significant (nested ANOVA, $p=0.119$).
+
+%This acceleration value was found using the LSRL (Least Squares Regression Line), which provides the best fit linear relationship between velocity and time. Each trial, therefore, produced a single acceleration value from the slope of its LSRL, and the individual time points were not treated as independent measurements, avoiding pseudoreplication. The difference between the level of acceleration for the bottle with water and the bottle with rocks can be accounted for by a timing error in a rock trial. The timing error is evident because rock trial 3 took 0.2 seconds longer than any other rock trial or water trial, although it has more mass than a bottle of water. However, most of the timing was relatively consistent since the bottle of water, on average, took longer to fall than the bottle of rocks. The mean time across 5 trials of water was 0.9272 seconds, and the average time across 5 trials of rocks was 0.9324 seconds. To add, as shown by the 10 graphs for figures 3.2 and 3.4, the acceleration of both the water and the rocks differed significantly from 9.8 \cite{tipler, openstax, barrons}, likely indicating human error, and not implying a violation of Galileo’s principle of acceleration.
 
 %4.2 Restating The Experiment
 %Our experiment aimed to determine whether the water bottle filled with rocks (heavier/higher density) would fall faster than the water bottle filled with water (lighter/lower density) through a series of tests. Our 2 water bottles were 2 identical plastic water bottles that were emptied and stuffed to the limit (3/4th of the capacity) with the contents. These tests involved dropping the two water bottles that differed in density from a height of 5 meters. While there is a significant mass difference between the two bottles, which could be perceived as a limitation, Galileo's Theory applies regardless of mass magnitude
 
 \subsection{Sources of experimental error}
-Although the statistical test suggests the difference in mean fall times, this result does not contradict Galilei's theory of free fall. Under Galilean assumptions, any deviation from equal fall times must be attributed to imperfections in the experiments, such as human error, rather than the physical law itself. An example of this human bias is the reaction time regarding timing the falls \cite{hetzler:2008:reliability,faux:2019:manual}. This is why we decided to perform a video motion analysis of the experiment and get the exact time each bottle took to fall from that height. The stopwatch data was only used to double-check that the times given by our motion analysis were reasonable. Also, the imperfect angle at which the bottle had fallen due to bottle tumbling, wind, and drag could cause imperfection. This could cause the times to be inaccurate, and in turn, the velocity to be inaccurate. Also, the drop height was estimated rather than precisely measured. Lastly, we did have coarse time intervals. This was because data points were limited by frame rate when digitizing the motion. This is a limitation of the video analysis method used, but this method was still great as it worked well in finding the velocity at certain times.
+Our measured accelerations (\cref{tab:1}) are somewhat higher than the expected value of $g=\qty{9.8}{\meter\per\second\squared}$. Our measured fall times are somewhat shorter than might be expected for a \qty{5}{\meter} drop. This could be due to variation in the drop height; inadvertent slight downward velocity at release; and bias in human reaction time when timing the falls with stopwatches \cite{hetzler:2008:reliability,faux:2019:manual}. This latter is also suggested by more reasonable estimates for $g$ in data obtained from digitized kinematic data (\cref{fig:2}). 
+
+%Although the statistical test suggests the difference in mean fall times, this result does not contradict Galilei's theory of free fall. Under Galilean assumptions, any deviation from equal fall times must be attributed to imperfections in the experiments, such as human error, rather than the physical law itself. An example of this human bias is the reaction time regarding timing the falls \cite{hetzler:2008:reliability,faux:2019:manual}. This is why we decided to perform a video motion analysis of the experiment and get the exact time each bottle took to fall from that height. The stopwatch data was only used to double-check that the times given by our motion analysis were reasonable. Also, the imperfect angle at which the bottle had fallen due to bottle tumbling, wind, and drag could cause imperfection. This could cause the times to be inaccurate, and in turn, the velocity to be inaccurate. Also, the drop height was estimated rather than precisely measured. Lastly, we did have coarse time intervals. This was because data points were limited by frame rate when digitizing the motion. This is a limitation of the video analysis method used, but this method was still great as it worked well in finding the velocity at certain times.
 
 %4.4 Statistical Analysis
 %Overall, the $t$-test reinforces the idea that the bottle will have the same acceleration despite having differing masses. The test statistic obtained provides us with a value that is greater than the tested significance value. This test showed no significant difference between the accelerations of the two bottles (rocks and water), which reinforces the idea of Galilean free fall, an integral part of physics. Also, Video analysis that was performed using the FizziQ app \cite{chazot:2025:using} confirmed that both models underwent a constant acceleration in every trial. FizziQ confirmed this by demonstrating a linear relationship between the velocities of each bottle falling between certain points.
